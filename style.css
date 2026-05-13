@@ -39,7 +39,7 @@ body {
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
-    z-index: 20000;
+    z-index: 9999;
 
     /* 🔑 THIS LINE */
     transform: translate(-50%, -50%);
@@ -52,19 +52,12 @@ body {
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
-    z-index: 19999;
+    z-index: 9998;
     transition: transform 0.1s;
     opacity: 0.5;
 
     /* 🔑 AND THIS LINE */
     transform: translate(-50%, -50%);
-}
-@media (hover: none), (pointer: coarse) {
-  canvas,
-  .cursor,
-  .cursor-follower {
-    pointer-events: none !important;
-  }
 }
 
 
@@ -97,11 +90,6 @@ a {
     text-decoration: none;
     transition: color 0.25s ease, opacity 0.25s ease;
 }
-#navbar {
-  position: fixed;   /* or sticky */
-  z-index: 9999;
-}
-
 
 /* === Hero === */
 header { height: 100vh; display: flex; align-items: center; position: relative; }
@@ -121,9 +109,6 @@ header { height: 100vh; display: flex; align-items: center; position: relative; 
 /* === About Cards === */
 .about-grid { display: grid; grid-template-columns: 1.57fr 1fr; gap: 40px; }
 .about-card, .interests-card { background: rgba(255,255,255,0.03); padding: 40px; border: 1px solid rgba(255,255,255,0.05); }
-
-/* Research meeting card: keep it in the same frame, but let it sit nicely under the two columns */
-.meeting-card { grid-column: 1 / -1; }
 .stats-row { display: flex; gap: 40px; margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
 .stat { display: flex; flex-direction: column; }
 .stat .number { font-family: var(--font-heading); font-size: 2rem; color: var(--accent-gold); }
@@ -227,23 +212,6 @@ footer { background: #000; padding: 80px 0 30px; border-top: 1px solid rgba(255,
     .email-big { font-size: 1.5rem; }
 }
 
-/* Better phone layout (small screens) */
-@media (max-width: 600px) {
-    header { height: auto; padding: 110px 0 60px; }
-    .hero-text h1 { font-size: 2.4rem; }
-    .intro { font-size: 1rem; }
-    .btn { width: 100%; text-align: center; }
-    .btn-outline { margin-left: 0; margin-top: 12px; }
-    .about-card, .interests-card { padding: 26px; }
-    .section { padding: 70px 0; }
-}
-
-/* Touch devices: don't hide the system cursor / don't show custom cursors */
-@media (hover: none), (pointer: coarse) {
-    * { cursor: auto !important; }
-    .cursor, .cursor-follower { display: none !important; }
-}
-
 .hero-container {
     display: flex;
     align-items: center;
@@ -326,10 +294,6 @@ footer { background: #000; padding: 80px 0 30px; border-top: 1px solid rgba(255,
         gap: 50px;
     }
 
-    /* Mobile/tablet hero order: photo first, then the headline/text */
-    .hero-image-wrapper { order: 1; }
-    .hero-text { order: 2; }
-
     .hero-text h1 { font-size: 3.5rem; }
     .hero-image-wrapper { max-width: 380px; margin: 0 auto;  }
     
@@ -378,38 +342,67 @@ a {
     opacity: 0.9;
 }
 
-#lattice-canvas {
-  pointer-events: none;
+/* Publications left-year timeline */
+
+.pub-timeline-left {
+    margin-top: 3rem;
 }
 
-/* ===== Publications: Year grouping ===== */
+.pub-year-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 2rem;
+    position: relative;
+    margin-bottom: 3rem;
+}
 
-/* Bigger year header */
-.pub-year {
-    margin: 2.75rem 0 1.25rem;
-    font-size: 1.65rem;
+/* Publications timeline — match website accent */
+
+.pub-year-label {
+    color: var(--accent-color, #c9a86a);
+    font-size: 1.85rem;
     font-weight: 700;
-    letter-spacing: 0.04em;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
-/* Indent all papers under a year */
-.pub-year-group {
-    margin-left: 1.25rem;
-    padding-left: 1.25rem;
-    border-left: 2px solid rgba(255, 255, 255, 0.12);
+.pub-year-content {
+    border-left: 2px solid var(--accent-color, #c9a86a);
+    padding-left: 2rem;
+    position: relative;
 }
 
-/* Slight spacing between groups */
-.pub-year-group .pub-card:last-child {
-    margin-bottom: 0.25rem;
+.pub-year-content::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 1.2rem;
+    width: 12px;
+    height: 12px;
+    background: var(--accent-color, #c9a86a);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(201, 168, 106, 0.35);
 }
 
-/* Mobile: reduce indentation */
-@media (max-width: 600px) {
-    .pub-year-group {
-        margin-left: 0.6rem;
-        padding-left: 0.9rem;
+.pub-year-content .pub-card {
+    margin-bottom: 1.5rem;
+}
+
+.pub-year-content .pub-card:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+    .pub-year-row {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .pub-year-label {
+        text-align: left;
+        padding-top: 0;
+    }
+
+    .pub-year-content {
+        padding-left: 1rem;
     }
 }
-
