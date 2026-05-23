@@ -406,3 +406,100 @@ a {
         padding-left: 1rem;
     }
 }
+/* ===== Light / Dark Theme Toggle ===== */
+
+body[data-theme="light"] {
+    --bg-dark: #f7f3ea;
+    --bg-card: #ffffff;
+    --text-main: #2b2b2b;
+    --text-white: #111111;
+    --accent-gold: #9b7653;
+    --accent-blue: #2f716f;
+}
+
+/* Smooth transition */
+body,
+nav,
+.about-card,
+.interests-card,
+.feature-card,
+.personal-wrapper,
+.pub-card,
+footer {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Toggle button */
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(198, 168, 124, 0.45);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    cursor: none;
+}
+
+.theme-toggle:hover {
+    background: var(--accent-gold);
+    color: var(--bg-dark);
+    transform: translateY(-2px);
+}
+
+/* Light mode cards */
+body[data-theme="light"] .about-card,
+body[data-theme="light"] .interests-card,
+body[data-theme="light"] .feature-card {
+    background: rgba(255, 255, 255, 0.72);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Light mode navbar */
+body[data-theme="light"] nav.scrolled {
+    background: rgba(247, 243, 234, 0.92);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Light mode dark sections */
+body[data-theme="light"] .dark-glass {
+    background: rgba(255, 255, 255, 0.45);
+}
+
+/* Light mode footer */
+body[data-theme="light"] footer {
+    background: #efe8db;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Light mode publication borders */
+body[data-theme="light"] .pub-card {
+    border-bottom-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Light mode timeline */
+body[data-theme="light"] .pub-year-content {
+    border-left-color: var(--accent-gold);
+}
+
+body[data-theme="light"] .pub-year-content::before {
+    background: var(--accent-gold);
+}
+
+/* Light mode hero image frame */
+body[data-theme="light"] .quantum-frame {
+    background: linear-gradient(135deg, rgba(255,255,255,0.75), rgba(235,225,210,0.55));
+    border-color: rgba(155, 118, 83, 0.35);
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+    .theme-toggle {
+        width: 38px;
+        height: 38px;
+    }
+}
