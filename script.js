@@ -1,3 +1,28 @@
+// == Light / Dark Theme Toggle ==
+const themeToggle = document.getElementById('theme-toggle');
+const savedTheme = localStorage.getItem('theme') || 'dark';
+
+document.body.setAttribute('data-theme', savedTheme);
+
+if (themeToggle) {
+    const icon = themeToggle.querySelector('i');
+
+    if (savedTheme === 'light') {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+        document.body.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+
+        icon.classList.toggle('fa-moon', newTheme === 'dark');
+        icon.classList.toggle('fa-sun', newTheme === 'light');
+    });
+}
 AOS.init({
     once: true
 });
@@ -5,7 +30,7 @@ AOS.init({
 // == Custom Cursor Logic ==
 const cursor = document.querySelector('.cursor');
 const follower = document.querySelector('.cursor-follower');
-const links = document.querySelectorAll('a, .btn');
+const links = document.querySelectorAll('a, .btn, .theme-toggle');
 
 document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + 'px';
