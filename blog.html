@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Maher Mamah</title>
+    <meta name="description" content="Notes and writing by Maher Mamah on cryptography, number theory, and quantum computing.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/latin-modern-mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="brand">Maher Mamah</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about" class="hover-link">About</a></li>
+                <li><a href="index.html#news" class="hover-link">News</a></li>
+                <li><a href="publications.html" class="hover-link">Publications</a></li>
+                <li><a href="talks.html" class="hover-link">Talks</a></li>
+                <li><a href="blog.html" class="hover-link active">Blog</a></li>
+                <li><a href="index.html#contact" class="hover-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-btn" type="button" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section publications-page">
+        <div class="container">
+            <h2 class="section-title">Blog</h2>
+            <p class="prose">Notes, expositions, and occasional thoughts on isogenies, codes, number theory, and quantum algorithms.</p>
+
+            <!--
+                To add a post: copy one <article class="blog-item"> block below,
+                update the date, title, link, excerpt, and tags. Each post links
+                to its own page (e.g. posts/my-post.html).
+            -->
+            <div class="blog-list">
+
+                <article class="blog-item">
+                    <div class="blog-meta">
+                        <span class="blog-date">2026 · 06 · 25</span>
+                        <span class="pub-chip">Isogenies</span>
+                    </div>
+                    <h3 class="blog-title"><a href="#">A gentle intro to supersingular isogeny graphs</a></h3>
+                    <p class="blog-excerpt">Why these expander graphs show up everywhere in post-quantum isogeny-based cryptography. <span class="blog-soon">(draft — coming soon)</span></p>
+                </article>
+
+            </div>
+
+            <!-- Empty-state shown when you have no posts yet; delete the article above
+                 and uncomment this to display it instead.
+            <div class="blog-empty">
+                <i class="fas fa-feather-pointed"></i>
+                <p>No posts yet. Check back soon.</p>
+            </div>
+            -->
+
+            <div class="see-more">
+                <a href="index.html" class="btn"><i class="fas fa-arrow-left"></i> Back to home</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Maher Mamah</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
