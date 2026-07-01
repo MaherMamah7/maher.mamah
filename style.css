@@ -496,6 +496,17 @@ footer {
     padding: 3px 9px;
 }
 .pub-chip.venue { color: var(--text); font-weight: 500; }
+.pub-chip.cic {
+    color: #2f7d4f;
+    background: rgba(47, 125, 79, 0.1);
+    border-color: rgba(47, 125, 79, 0.35);
+    font-weight: 600;
+}
+[data-theme="dark"] .pub-chip.cic {
+    color: #6dc28b;
+    background: rgba(109, 194, 139, 0.12);
+    border-color: rgba(109, 194, 139, 0.35);
+}
 
 /* BibTeX block */
 .bibtex-block {
