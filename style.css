@@ -643,3 +643,20 @@ footer {
     .footer-grid { flex-direction: column; }
     .pub-entry { padding-left: 32px; }
 }
+
+.talk-venue a.isogeny-club-link {
+    display: inline-block;
+    background-color: #6741d9;
+    color: #ffffff;
+    padding: 3px 9px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 1;
+}
+
+.talk-venue a.isogeny-club-link:hover {
+    background-color: #7950f2;
+    color: #ffffff;
+}
+
