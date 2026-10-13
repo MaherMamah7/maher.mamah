@@ -570,7 +570,8 @@ footer {
 .uni.uw  { background: #c9a227; color: #1c1b19; }  /* Waterloo gold */
 .uni.psu { background: #4071b5; }                  /* Penn State blue */
 .uni.umd { background: #d23b4e; }                  /* Maryland red */
-.uni.ucal { background: #c8102e; }                 /* Calgary red */
+.uni.ucal { background: #c8102e; }    
+.uni.ic { background: #6741d9; color: #ffffff; } /* Isogeny Club *//* Calgary red */
 
 /* ===== Blog ===== */
 .blog-list {
