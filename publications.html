@@ -1,95 +1,140 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html data-theme="dark" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications | Maher Mamah</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/latin-modern-mono" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Publications | Maher Mamah</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.cdnfonts.com/css/latin-modern-mono" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+/* Publications: title → authors → prominent publication venue. */
+.publications-page .pub-entry .pub-citation {
+    margin: 0 0 0.75rem;
+    line-height: 1.5;
+}
+.publications-page .pub-entry .pub-title {
+    display: block;
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.28;
+    margin-bottom: 0.32rem;
+}
+.publications-page .pub-entry .pub-title a {
+    color: inherit;
+    text-decoration: none;
+}
+.publications-page .pub-entry .pub-title a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+.publications-page .pub-entry .pub-authors {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.94rem;
+    font-weight: 400;
+    opacity: 0.88;
+    line-height: 1.5;
+}
+.publications-page .pub-entry .pub-venue-line {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.12rem;
+    font-weight: 600;
+    line-height: 1.45;
+    margin-top: 0.38rem;
+}
+.publications-page .pub-entry .pub-venue {
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: normal;
+}
+.publications-page .pub-entry .pub-venue-details,
+.publications-page .pub-entry .pub-press {
+    font-size: 0.85rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+@media (max-width: 600px) {
+    .publications-page .pub-entry .pub-title { font-size: 1.22rem; }
+    .publications-page .pub-entry .pub-venue-line { font-size: 1.03rem; }
+}
+</style></head>
 <body>
-
-    <nav id="navbar">
-        <div class="container nav-wrapper">
-            <a href="index.html" class="brand">Maher Mamah</a>
-            <ul class="nav-links">
-                <li><a href="index.html#about" class="hover-link">About</a></li>
-                <li><a href="index.html#news" class="hover-link">News</a></li>
-                <li><a href="publications.html" class="hover-link active">Publications</a></li>
-                <li><a href="talks.html" class="hover-link">Talks</a></li>
-                <li><a href="blog.html" class="hover-link">Blog</a></li>
-                <li><a href="index.html#contact" class="hover-link">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <button class="menu-btn" type="button" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
-            </div>
-        </div>
-    </nav>
-
-    <section class="section publications-page">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
-
-            <!-- Bibliometrics: edit the numbers, or pull live figures from Scholar -->
-            <div class="bibliometrics">
-                <div class="bib-stat"><span class="bib-num">4</span><span class="bib-label">Publications</span></div>
-                <div class="bib-stat"><span class="bib-num">5</span><span class="bib-label">Preprints</span></div>
-                <div class="bib-stat"><span class="bib-num">3</span><span class="bib-label">Journal</span></div>
-                <div class="bib-stat">
-                    <a class="bib-num link" href="https://scholar.google.com/citations?user=qRPQgicAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
-                    <span class="bib-label">Google Scholar</span>
-                </div>
-            </div>
-
-            <ol class="pub-numbered">
-                <li class="pub-section-head"><span class="pub-section-title">In Press &amp; Preprints</span><span class="pub-year-count">5</span></li>
-                
-
-                <!-- ===== In Press / not yet published ===== -->
-                <li class="pub-entry">
-                    <p class="pub-citation">S. Lee, M. Mamah, B. Sterner &ldquo;On the Multi-User Security of CSI-FiSh with Tight Reductions,&rdquo; <span class="pub-venue">Cryptology ePrint Archive</span>, Paper 2026/2216, 2026. <span class="pub-press">[in press]</span></p>
-                    <div class="pub-actions">
-                        <a class="pub-action" href="https://eprint.iacr.org/2026/2216" target="_blank" rel="noopener">ePrint</a>
-                        <button class="pub-action bibtex-btn" type="button">BibTeX</button>
-                    </div>
-                    <pre class="bibtex-block">@misc{LMS26,
+<nav id="navbar">
+<div class="container nav-wrapper">
+<a class="brand" href="index.html">Maher Mamah</a>
+<ul class="nav-links">
+<li><a class="hover-link" href="index.html#about">About</a></li>
+<li><a class="hover-link" href="index.html#news">News</a></li>
+<li><a class="hover-link active" href="publications.html">Publications</a></li>
+<li><a class="hover-link" href="talks.html">Talks</a></li>
+<li><a class="hover-link" href="blog.html">Blog</a></li>
+<li><a class="hover-link" href="index.html#contact">Contact</a></li>
+</ul>
+<div class="nav-actions">
+<button aria-label="Toggle light and dark mode" class="theme-toggle" id="theme-toggle" type="button">
+<i class="fas fa-moon"></i>
+</button>
+<button aria-label="Toggle menu" class="menu-btn" type="button"><i class="fas fa-bars"></i></button>
+</div>
+</div>
+</nav>
+<section class="section publications-page">
+<div class="container">
+<h2 class="section-title">Publications</h2>
+<!-- Bibliometrics: edit the numbers, or pull live figures from Scholar -->
+<div class="bibliometrics">
+<div class="bib-stat"><span class="bib-num">4</span><span class="bib-label">Publications</span></div>
+<div class="bib-stat"><span class="bib-num">5</span><span class="bib-label">Preprints</span></div>
+<div class="bib-stat"><span class="bib-num">3</span><span class="bib-label">Journal</span></div>
+<div class="bib-stat">
+<a class="bib-num link" href="https://scholar.google.com/citations?user=qRPQgicAAAAJ&amp;hl=en" rel="noopener" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+<span class="bib-label">Google Scholar</span>
+</div>
+</div>
+<ol class="pub-numbered">
+<li class="pub-section-head"><span class="pub-section-title">In Press &amp; Preprints</span><span class="pub-year-count">5</span></li>
+<!-- ===== In Press / not yet published ===== -->
+<li class="pub-entry">
+<p class="pub-citation"><span class="pub-title">On the Multi-User Security of CSI-FiSh with Tight Reductions</span><span class="pub-authors">Seunghoon Lee, Maher Mamah, and Bruno Sterner</span><span class="pub-venue-line"><span class="pub-venue">Cryptology ePrint Archive</span><span class="pub-venue-details"> · Paper 2026/2216 · 2026</span><span class="pub-press"> · In press</span></span></p>
+<div class="pub-actions">
+<a class="pub-action" href="https://eprint.iacr.org/2026/2216" rel="noopener" target="_blank">ePrint</a>
+<button class="pub-action bibtex-btn" type="button">BibTeX</button>
+</div>
+<pre class="bibtex-block">@misc{LMS26,
   author       = {Seunghoon Lee, Maher Mamah, Bruno Sterner},
   title        = {Complexity Analysis and Security Implications of the New Isogeny-Path Algorithm},
   year         = {2026},
   howpublished = {Cryptology ePrint Archive, Paper 2026/2216},
   url          = {https://eprint.iacr.org/2026/2216}
 }</pre>
-                </li>
-                <li class="pub-entry">
-                    <p class="pub-citation">M. Mamah &ldquo;Complexity Analysis and Security Implications of the New Isogeny-Path Algorithm,&rdquo; <span class="pub-venue">Cryptology ePrint Archive</span>, Paper 2026/1821, 2026. <span class="pub-press">[in press]</span></p>
-                    <div class="pub-actions">
-                        <a class="pub-action" href="https://eprint.iacr.org/2026/1821" target="_blank" rel="noopener">ePrint</a>
-                        <button class="pub-action bibtex-btn" type="button">BibTeX</button>
-                    </div>
-                    <pre class="bibtex-block">@misc{mamah2026spectral,
+</li>
+<li class="pub-entry">
+<p class="pub-citation"><span class="pub-title">Complexity Analysis and Security Implications of the New Isogeny-Path Algorithm</span><span class="pub-authors">Maher Mamah</span><span class="pub-venue-line"><span class="pub-venue">Cryptology ePrint Archive</span><span class="pub-venue-details"> · Paper 2026/1821 · 2026</span><span class="pub-press"> · In press</span></span></p>
+<div class="pub-actions">
+<a class="pub-action" href="https://eprint.iacr.org/2026/1821" rel="noopener" target="_blank">ePrint</a>
+<button class="pub-action bibtex-btn" type="button">BibTeX</button>
+</div>
+<pre class="bibtex-block">@misc{mamah2026spectral,
   author       = {Maher Mamah},
   title        = {Complexity Analysis and Security Implications of the New Isogeny-Path Algorithm},
   year         = {2026},
   howpublished = {Cryptology ePrint Archive, Paper 2026/1821},
   url          = {https://eprint.iacr.org/2026/1821}
 }</pre>
-                </li>
-
-
-                <li class="pub-entry">
-                    <p class="pub-citation">M. Mamah, J. Doliskani, and D. Jao, &ldquo;On the Spectral Theory of Isogeny Graphs and Quantum Sampling of Secure Supersingular Elliptic Curves,&rdquo; <span class="pub-venue">Cryptology ePrint Archive</span>, Paper 2026/171, 2026. <span class="pub-press">[in press]</span></p>
-                    <div class="pub-actions">
-                        <a class="pub-action" href="https://eprint.iacr.org/2026/171" target="_blank" rel="noopener">ePrint</a>
-                        <button class="pub-action bibtex-btn" type="button">BibTeX</button>
-                    </div>
-                    <pre class="bibtex-block">@misc{mamah2026spectral,
+</li>
+<li class="pub-entry">
+<p class="pub-citation"><span class="pub-title">On the Spectral Theory of Isogeny Graphs and Quantum Sampling of Secure Supersingular Elliptic Curves</span><span class="pub-authors">Maher Mamah, Jake Doliskani, and David Jao</span><span class="pub-venue-line"><span class="pub-venue">Cryptology ePrint Archive</span><span class="pub-venue-details"> · Paper 2026/171 · 2026</span><span class="pub-press"> · In press</span></span></p>
+<div class="pub-actions">
+<a class="pub-action" href="https://eprint.iacr.org/2026/171" rel="noopener" target="_blank">ePrint</a>
+<button class="pub-action bibtex-btn" type="button">BibTeX</button>
+</div>
+<pre class="bibtex-block">@misc{mamah2026spectral,
   author       = {Maher Mamah and Jake Doliskani and David Jao},
   title        = {On the Spectral Theory of Isogeny Graphs and Quantum Sampling
                   of Secure Supersingular Elliptic Curves},
@@ -97,15 +142,14 @@
   howpublished = {Cryptology ePrint Archive, Paper 2026/171},
   url          = {https://eprint.iacr.org/2026/171}
 }</pre>
-                </li>
-
-                <li class="pub-entry">
-                    <p class="pub-citation">M. Mamah, &ldquo;Computing Quaternion Embeddings and Endomorphism Rings of Supersingular Oriented Elliptic Curves,&rdquo; <span class="pub-venue">Cryptology ePrint Archive</span>, Paper 2025/186, 2025. <span class="pub-press">[in press]</span></p>
-                    <div class="pub-actions">
-                        <a class="pub-action" href="https://eprint.iacr.org/2025/186" target="_blank" rel="noopener">ePrint</a>
-                        <button class="pub-action bibtex-btn" type="button">BibTeX</button>
-                    </div>
-                    <pre class="bibtex-block">@misc{mamah2025quaternion,
+</li>
+<li class="pub-entry">
+<p class="pub-citation"><span class="pub-title">Computing Quaternion Embeddings and Endomorphism Rings of Supersingular Oriented Elliptic Curves</span><span class="pub-authors">Maher Mamah</span><span class="pub-venue-line"><span class="pub-venue">Cryptology ePrint Archive</span><span class="pub-venue-details"> · Paper 2025/186 · 2025</span><span class="pub-press"> · In press</span></span></p>
+<div class="pub-actions">
+<a class="pub-action" href="https://eprint.iacr.org/2025/186" rel="noopener" target="_blank">ePrint</a>
+<button class="pub-action bibtex-btn" type="button">BibTeX</button>
+</div>
+<pre class="bibtex-block">@misc{mamah2025quaternion,
   author       = {Maher Mamah},
   title        = {Computing Quaternion Embeddings and Endomorphism Rings
                   of Supersingular Oriented Elliptic Curves},
@@ -113,15 +157,14 @@
   howpublished = {Cryptology ePrint Archive, Paper 2025/186},
   url          = {https://eprint.iacr.org/2025/186}
 }</pre>
-                </li>
-
-                <li class="pub-entry">
-                    <p class="pub-citation">M. Mamah, &ldquo;Enhanced Algorithms for the Representation of Integers by Binary Quadratic Forms,&rdquo; <span class="pub-venue">arXiv:2502.11402</span>, 2025. <span class="pub-press">[in press]</span></p>
-                    <div class="pub-actions">
-                        <a class="pub-action" href="https://arxiv.org/abs/2502.11402" target="_blank" rel="noopener">arXiv</a>
-                        <button class="pub-action bibtex-btn" type="button">BibTeX</button>
-                    </div>
-                    <pre class="bibtex-block">@misc{mamah2025bqf,
+</li>
+<li class="pub-entry">
+<p class="pub-citation"><span class="pub-title">Enhanced Algorithms for the Representation of Integers by Binary Quadratic Forms</span><span class="pub-authors">Maher Mamah</span><span class="pub-venue-line"><span class="pub-venue">arXiv</span><span class="pub-venue-details"> · 2502.11402 · 2025</span><span class="pub-press"> · In press</span></span></p>
+<div class="pub-actions">
+<a class="pub-action" href="https://arxiv.org/abs/2502.11402" rel="noopener" target="_blank">arXiv</a>
+<button class="pub-action bibtex-btn" type="button">BibTeX</button>
+</div>
+<pre class="bibtex-block">@misc{mamah2025bqf,
   author        = {Maher Mamah},
   title         = {Enhanced Algorithms for the Representation of Integers
                    by Binary Quadratic Forms},
@@ -130,19 +173,17 @@
   archivePrefix = {arXiv},
   url           = {https://arxiv.org/abs/2502.11402}
 }</pre>
-                </li>
-
-                <!-- ===== Published ===== -->
-                <li class="pub-section-head"><span class="pub-section-title">Published</span></li>
-                
-                 <li class="pub-year-sep"><span class="pub-year-num">2026</span><span class="pub-year-count">2</span></li>
-                <li class="pub-entry">
-                    <p class="pub-citation">L. Colò, M. Mamah, Y. Mokrani, B. Sterner and N. Swanson, &ldquo;Zero-Knowledge Proofs of Isogeny Diamonds,&rdquo; to appear in <span class="pub-venue">Communications in Cryptology Journal</span>, vol. 3, issue. 3, 2026. </p>
-                    <div class="pub-actions">
-                        <a class="pub-action" href="https://eprint.iacr.org/2026/1545" target="_blank" rel="noopener">ePrint</a>
-                        <button class="pub-action bibtex-btn" type="button">BibTeX</button>
-                    </div>
-                    <pre class="bibtex-block">@misc{CMM+26,
+</li>
+<!-- ===== Published ===== -->
+<li class="pub-section-head"><span class="pub-section-title">Published</span></li>
+<li class="pub-year-sep"><span class="pub-year-num">2026</span><span class="pub-year-count">3</span></li>
+<li class="pub-entry">
+<p class="pub-citation"><span class="pub-title">Zero-Knowledge Proofs of Isogeny Diamonds</span><span class="pub-authors">Leonardo Colò, Maher Mamah, Youcef Mokrani, Bruno Sterner, and Nicolas Swanson</span><span class="pub-venue-line"><span class="pub-venue">Communications in Cryptology</span><span class="pub-venue-details"> · Vol. 3, No. 3 · 2026</span><span class="pub-press"> · To appear</span></span></p>
+<div class="pub-actions">
+<a class="pub-action" href="https://eprint.iacr.org/2026/1545" rel="noopener" target="_blank">ePrint</a>
+<button class="pub-action bibtex-btn" type="button">BibTeX</button>
+</div>
+<pre class="bibtex-block">@misc{CMM+26,
   author       = {Leonardo Colò, Maher Mamah, Youcef Mokrani, Bruno Sterner and Nicolas Swanson},
   title        = {Zero-Knowledge Proofs of Isogeny Diamonds},
   journal = {Communications in Cryptology},
@@ -151,31 +192,32 @@
   year    = {2026}
   url          = {https://eprint.iacr.org/2026/1545}
 }</pre>
-                </li>
-                </li>
-                <li class="pub-entry">
-                    <p class="pub-citation">M. Mamah, and D. Jao, &ldquo; A Note on the Security Proof of SQIsign,&rdquo; <span class="pub-venue">To appear in ACM PQQS conferenece 2026.</span></p>
-                    <div class="pub-actions">
-                        <a class="pub-action" href="https://eprint.iacr.org/2026/1775" target="_blank" rel="noopener">ePrint</a>
-                        <button class="pub-action bibtex-btn" type="button">BibTeX</button>
-                        <span class="pub-chip">ACM PQQS</span>
-                    </div>
-                    <pre class="bibtex-block">@misc{MD26,
-  author       = {Maher Mamah and David Jao},
-  title        = {A Note on the Security Proof of SQIsign},
-  year         = {2026},
-  howpublished = {Cryptology ePrint Archive, Paper 2026/1775},
-  url          = {https://eprint.iacr.org/2026/1775}
+</li>
+
+<li class="pub-entry">
+<p class="pub-citation"><span class="pub-title"><a href="https://dl.acm.org/doi/10.1145/3839338.3857239" rel="noopener" target="_blank">A Note on the Security Proof of SQIsign</a></span><span class="pub-authors">Maher Mamah and David Jao</span><span class="pub-venue-line"><span class="pub-venue">ACM PQQS 2026</span></span></p>
+<div class="pub-actions">
+<a class="pub-action" href="https://dl.acm.org/doi/10.1145/3839338.3857239" rel="noopener" target="_blank">ACM DOI</a><a class="pub-action" href="https://eprint.iacr.org/2026/1775" rel="noopener" target="_blank">ePrint</a>
+<button class="pub-action bibtex-btn" type="button">BibTeX</button>
+<span class="pub-chip">ACM PQQS</span>
+</div>
+<pre class="bibtex-block">@inproceedings{MD26,
+  author    = {Maher Mamah and David Jao},
+  title     = {A Note on the Security Proof of SQIsign},
+  booktitle = {ACM PQQS},
+  year      = {2026},
+  doi       = {10.1145/3839338.3857239},
+  url       = {https://dl.acm.org/doi/10.1145/3839338.3857239}
 }</pre>
-                </li>
-                <li class="pub-entry">
-                    <p class="pub-citation">M. Mamah, &ldquo;The Supersingular &#8467;-Isogeny Path and Endomorphism Ring Problems: Tighter Unconditional Reductions,&rdquo; <span class="pub-venue">Communications in Cryptology Journal</span>, vol. 3, issue. 2, 2026.</p>
-                    <div class="pub-actions">
-                        <a class="pub-action" href="https://cic.iacr.org/p/3/2/23" target="_blank" rel="noopener">link</a>
-                        <button class="pub-action bibtex-btn" type="button">BibTeX</button>
-                        <span class="pub-chip cic">CiC</span>
-                    </div>
-                    <pre class="bibtex-block">@article{mamah2024reductions,
+</li>
+<li class="pub-entry">
+<p class="pub-citation"><span class="pub-title">The Supersingular ℓ-Isogeny Path and Endomorphism Ring Problems: Tighter Unconditional Reductions</span><span class="pub-authors">Maher Mamah</span><span class="pub-venue-line"><span class="pub-venue">Communications in Cryptology</span><span class="pub-venue-details"> · Vol. 3, No. 2 · 2026</span></span></p>
+<div class="pub-actions">
+<a class="pub-action" href="https://cic.iacr.org/p/3/2/23" rel="noopener" target="_blank">link</a>
+<button class="pub-action bibtex-btn" type="button">BibTeX</button>
+<span class="pub-chip cic">CiC</span>
+</div>
+<pre class="bibtex-block">@article{mamah2024reductions,
   author  = {Maher Mamah},
   title   = {The Supersingular $\ell$-Isogeny Path and Endomorphism
              Ring Problems: Tighter Unconditional Reductions},
@@ -184,42 +226,35 @@
   number  = {2},
   year    = {2026}
 }</pre>
-                </li>
-
-                <li class="pub-year-sep"><span class="pub-year-num">2024</span><span class="pub-year-count">2</span></li>
-
-
-                <li class="pub-entry">
-                    <p class="pub-citation">M. Mamah and A. Saraeb, &ldquo;A Generalization of Siegel&rsquo;s Method to Jacobi&rsquo;s Function,&rdquo; <span class="pub-venue">The Ramanujan Journal</span>, 2024.</p>
-                    <div class="pub-actions">
-                        <a class="pub-action" href="https://link.springer.com/article/10.1007/s11139-024-00894-7" target="_blank" rel="noopener">DOI</a>
-                        <button class="pub-action bibtex-btn" type="button">BibTeX</button>
-                        <span class="pub-chip venue">Ramanujan J.</span>
-                        <span class="pub-chip">Journal</span>
-                    </div>
-                    <pre class="bibtex-block">@article{mamah2024siegel,
+</li>
+<li class="pub-year-sep"><span class="pub-year-num">2024</span><span class="pub-year-count">1</span></li>
+<li class="pub-entry">
+<p class="pub-citation"><span class="pub-title">A Generalization of Siegel’s Method to Jacobi’s Function</span><span class="pub-authors">Maher Mamah and A. Saraeb</span><span class="pub-venue-line"><span class="pub-venue">The Ramanujan Journal</span><span class="pub-venue-details"> · 2024</span></span></p>
+<div class="pub-actions">
+<a class="pub-action" href="https://link.springer.com/article/10.1007/s11139-024-00894-7" rel="noopener" target="_blank">DOI</a>
+<button class="pub-action bibtex-btn" type="button">BibTeX</button>
+<span class="pub-chip venue">Ramanujan J.</span>
+<span class="pub-chip">Journal</span>
+</div>
+<pre class="bibtex-block">@article{mamah2024siegel,
   author  = {Maher Mamah and A. Saraeb},
   title   = {A Generalization of Siegel's Method to Jacobi's Function},
   journal = {The Ramanujan Journal},
   year    = {2024},
   doi     = {10.1007/s11139-024-00894-7}
 }</pre>
-                </li>
-
-            </ol>
-
-            <div class="see-more">
-                <a href="index.html" class="btn"><i class="fas fa-arrow-left"></i> Back to home</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container footer-bottom">
-            <p>&copy; 2026 Maher Mamah</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+</li>
+</ol>
+<div class="see-more">
+<a class="btn" href="index.html"><i class="fas fa-arrow-left"></i> Back to home</a>
+</div>
+</div>
+</section>
+<footer>
+<div class="container footer-bottom">
+<p>© 2026 Maher Mamah</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
